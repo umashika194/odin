@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box; 
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.content {
+    background-color: rgb(236, 242, 242);
+    margin: 8px auto;
+    padding: 8px;
+    width: 400px
+}
+
+h1 {
+    background-color: blue;
+    margin: 8px 0px;
+    color: white;
+    padding: 8px;
+    text-align: center;
+}
+
+ul.inhalt {
+    list-style: none;
+    background-color: aqua;
+    padding: 8px;
+    margin: 8px 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: black;
+    color: yellow;
+}
+
+img {
+    border: 2px solid black;
+    width: 384px;
+    height: auto;
+}
+
+.rezept {
+    text
+}
+
+#back {
+    text-align:center;
+}
+
+h2 {
+    font-size: 28px;
+    text-decoration: underline dotted;
+    margin-top: 8px;
+}
+
+h3 {
+    color: red;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+ul.rezeptlist,
+ol.rezeptlist {
+    margin-top: 4px;
+    list-style-position: inside;
+    margin: auto -20px;
+}
+
+p.erklaerung {
+    margin-top: 4px;
+}
