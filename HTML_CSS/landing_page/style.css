@@ -1,0 +1,176 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    background-color: #1F2937;
+    color: white;
+    align-items: center;
+    flex: 1;
+    height: 400px;
+}
+
+.logo {
+    margin-bottom: auto;
+    font-weight: 800;
+}
+
+.awesome {
+    display: flex;
+    justify-content: center;
+    margin: 10px 50px 100px 50px;
+    height: 250px;
+}
+
+.awesome-left {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-shrink: 1;
+    gap: 7px;
+}
+
+button {
+    width: 100px;
+    background-color: #3882F6;
+    border-radius: 7px;
+    color: white;
+    border: 0px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.yolo1 {
+    font-size: 40px;
+    color: #F9FaF8;
+    font-weight: 900;
+}
+
+.yolo2 {
+    font-size: 10px;
+    color: #E5E7EB;
+}
+
+.awesome-right {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.header-right {
+    display: flex;
+    margin-bottom: auto;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+#awesome {
+    height: auto;
+    width: 250px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 10px;
+    color: #E5E7EB;
+}
+
+.top-mid {
+    background-color: white;
+    flex: 1 0 auto;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-header {
+    font-size: 28px;
+    font-weight: 900;
+    color: #1F2937;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    gap: 5px;
+}
+
+.box-box {
+    width: 100px;
+    height: 100px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    flex: 0 0 auto;
+}
+
+.box-text {
+    color: gray;
+    font-size: 10px;
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.bottom-mid {
+    background-color: #E5E7EB;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.quotetext {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 200px 50px 200px;
+    gap: 15px;
+    width: 400px;
+}
+
+.quote {
+    font-size: 20px;
+    color: #1F2937;
+    font-style: italic;
+    }
+
+.source {
+    text-align: right;
+    font-weight: bold;
+}
+
+.bottom {
+    background-color: white;
+    flex-shrink: 0;
+    height: 200px;
+}
+
+.footer {
+    background-color: #1F2937;
+    color: white;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+}
+
