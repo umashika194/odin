@@ -162,6 +162,9 @@ a {
     background-color: white;
     flex-shrink: 0;
     height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer {
@@ -174,3 +177,28 @@ a {
     align-items: center;;
 }
 
+.callbox {
+    color: white;
+    background-color: #3882F6;
+    border-radius: 5px;
+    width: 800px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button#signup2 {
+    border: 2px solid white;
+    padding: 5px 10px;
+    flex: 0 1 auto;
+}
+
+#callbold {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+#callsmall {
+    font-size: 12px;
+}
