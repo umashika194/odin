@@ -1,11 +1,4 @@
-let aNewVariable = 10;
+let a = 1;
+let b = 2;
 
-console.log(a);
-
-a = 100;
-
-console.log(a);
-
-let b = 7 * a;
-
-console.log(b);
+console.log(a + b + "100");
