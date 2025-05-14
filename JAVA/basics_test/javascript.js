@@ -1,7 +1,7 @@
-if (new Date().getMinutes() > 30) {
-    console.log("YOLO");
-} else if (new Date().getMinutes() > 20) {
-    console.log ("WAAAAAT?");
+let userName = prompt("Who's there?", '');
+
+if (!(age <= 14 || age >= 90)) {
+    console.log("yolo");
 } else {
-    console.log ("WTTTTTTF");
+    console.log("nooooo");
 }
