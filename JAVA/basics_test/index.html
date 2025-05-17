@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java-Tests</title>
-    <script src="javascript.js"></script>
-</head>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function library example</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+  </style>
+  </head>
 <body>
 
+  <input class="numberInput" type="text">
+  <p></p>
+    // Java-Tests
+  <script>
+    let add7 = (n) => n+7;
+    let multiply = (y,z) => y*z;
+    function capitalize(input) {
+        let lower = input.toLowerCase();
+        let rest = lower.substring(1);
+        let first = lower.charAt(0);
+        let firstupper = first.toUpperCase();
+        return firstupper+rest;
+    }
+    function lastLetter(string) {
+        let last = (string.length - 1);
+        return string.substring(last);
+    }
+
+  </script>
 </body>
 </html>
