@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // https://javascript.info/array #2
+        let array_1 = ["Jazz", "Blues"];
+        array_1.push("Rock-n-Roll");
+        array_1[Math.floor((array_1.length - 1) / 2)]="Classic";
+        array_1.shift(0);
+        array_1.unshift("Rap", "Reggae");
+        console.log(array_1);
+
+        // https://javascript.info/array #3
+        let arr = ["a", "b"];
+
+        arr.push(function() {
+        alert( this );
+        })
+
+        //arr[2](); // a,b,function(){...}
+
+        // https://javascript.info/array #5
+        function getMaxSubSum(arr) {
+            let maxSum = 0;
+            let partialSum = 0;
+
+            for (let item of arr) { // for each item of arr
+                partialSum += item; // add it to partialSum
+                maxSum = Math.max(maxSum, partialSum); // remember the maximum
+                if (partialSum < 0) partialSum = 0; // zero if negative
+            }
+
+            return maxSum;
+        } 
+    </script>
+</body>
+</html>
