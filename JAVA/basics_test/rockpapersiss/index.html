@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+    <script>
+        let computerScore = 0;
+        let userScore = 0;
+        let computerChoice;
+        function getComputerChoice() {
+            random = Math.random()*300;
+            if (random < 100) {
+                return computerChoice = "rock";
+            } else if (random < 200) {
+                return computerChoice = "paper";
+            } else if (random <= 300) {
+                return computerChoice = "scissors";
+            }
+        }
+
+        function getUserChoice(input) {
+            if (input === "rock") {
+                return userChoice = "rock";
+            } else if (input === "paper") {
+                return userChoice = "paper";
+            } else if (input === "scissors") {
+                return userChoice = "scissors";
+            } else {
+                console.log("please input a valid value");
+            }
+        }
+
+        function winCondition(input1,input2) {
+            if (input1 === input2 ) {
+                console.log("draw");
+            } else if (input1 === "rock" && input2 === "scissors" ) {
+                computerScore++;
+                console.log("computer wins");
+            } else if (input1 === "scissors" && input2 === "paper" ) {
+                computerScore++;
+                console.log("computer wins");
+            } else if (input1 === "paper" && input2 === "rock" ) {
+                computerScore++;
+                console.log("computer wins");
+            } else {
+                userScore++;
+                console.log("you win");
+            }
+        }
+
+        for (let i = 1; i <= 5; i++) {
+            getComputerChoice();
+            let input = prompt("Gief");
+            getUserChoice(input);
+            console.log("CPU: "+computerChoice + " |||| User: " + userChoice);
+            winCondition(computerChoice,userChoice);
+            console.log("CPU: "+computerScore + " |||| User: " + userScore);
+        }
+
+        console.log("Final Score: " + "CPU: "+ computerScore + " |||| User: " + userScore);
+        if (computerScore === userScore) {
+            console.log("DRAW!!!!");
+        } else if (computerScore > userScore ) {
+            console.log("YOU LOSE!!! HHAHAH!");
+        } else if (computerScore < userScore ) {
+            console.log("YOU WIN!!!");
+        }
+
+    </script>
+</body>
+</html>
