@@ -8,24 +8,24 @@
 <body>
     <script>
         // https://javascript.info/array #2
-        let array_1 = ["Jazz", "Blues"];
+        /* let array_1 = ["Jazz", "Blues"];
         array_1.push("Rock-n-Roll");
         array_1[Math.floor((array_1.length - 1) / 2)]="Classic";
         array_1.shift(0);
         array_1.unshift("Rap", "Reggae");
-        console.log(array_1);
+        console.log(array_1); */
 
         // https://javascript.info/array #3
-        let arr = ["a", "b"];
+        /* let arr = ["a", "b"];
 
         arr.push(function() {
         alert( this );
-        })
+        }) */
 
         //arr[2](); // a,b,function(){...}
 
         // https://javascript.info/array #5
-        function getMaxSubSum(arr) {
+        /* function getMaxSubSum(arr) {
             let maxSum = 0;
             let partialSum = 0;
 
@@ -36,7 +36,33 @@
             }
 
             return maxSum;
-        } 
+        }  */
+
+        // https://javascript.info/array-methods#tasks
+        // Translate border-left-width to borderLeftWidth
+        /* function camelize(word) {
+            let arr = word.split('-');
+            for (let i = 1; i <= arr.length-1; i++) {
+                arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
+            }
+        const result = arr.join('');
+        console.log(result);
+        } */
+
+        // Filter range
+        /* let arr = [5, 3, 8, 1, 10, 15];
+
+        let filtered = filterRange(arr, 4, 11);
+
+        function filterRange(array, a, b) {
+            return array.filter(item => (item >= a && item <= b));
+        }
+
+        alert( filtered ); // 3,1 (matching values)
+
+        alert( arr ); // 5,3,8,1 (not modified) */
+
+
     </script>
 </body>
 </html>
