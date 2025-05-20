@@ -21,6 +21,41 @@
              alert( `number ${i}!` );
              i++;
         }*/
+
+        /* let input = "";
+        while (input < 100 && input != null) {
+            input = prompt("gief input");
+        } */
+
+        /* let input = prompt("gief number");
+        for (let i = 2; i <= input; i++) {
+            for (let j = 2; j <= i; j++) {
+                if (i % j === 0 && i === j) {
+                    console.log(i);
+                } else if (i % j === 0) {
+                    break;
+                }
+            }
+        } */
+
+        // https://www.theodinproject.com/lessons/foundations-arrays-and-loops
+        let arr=[1, 2, 3, 4, 5];
+        console.log(arr);
+
+        // Take in an array.
+        // For every even number, it will triple it.
+        // Then it will sum all those even numbers.
+
+        function sumOfTripledEvens(array) {
+        array1 = array.filter((num) => num % 2 === 0)
+        array2 = array1.map((num) => num * 3)
+        array3 = array2.reduce((acc, curr) => acc + curr);
+        return array3;
+        }
+        
+        const result = sumOfTripledEvens(arr);
+        console.log(result);
+
     </script>
 </body>
 </html>
