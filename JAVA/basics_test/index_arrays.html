@@ -62,6 +62,30 @@
 
         alert( arr ); // 5,3,8,1 (not modified) */
 
+        // Filter range "in place"
+        /*let arr = [5, 3, 8, 1, 10, 15, 21, 55];
+
+        function filterRangeInPlace(array, a, b) {
+            for (let i = 0; i < array.length; i++) {
+                let val = arr[i];
+                if (val >= a && val <= b) {
+                    console.log(val);
+                    continue;
+                } else {
+                    array.splice(i,1);
+                    // need to count down i because splice changes the index....
+                    i--;
+                }
+            }
+        }     
+
+        filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+
+        alert( arr ); // [3, 1]*/
+
+        
+    
+
 
     </script>
 </body>
