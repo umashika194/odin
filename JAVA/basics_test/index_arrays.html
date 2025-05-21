@@ -62,7 +62,7 @@
         alert( arr ); // 5,3,8,1 (not modified) */
 
         // Filter range "in place"
-        /*let arr = [5, 3, 8, 1, 10, 15, 21, 55];
+        /* let arr = [5, 3, 8, 1, 10, 15, 21, 55];
 
         function filterRangeInPlace(array, a, b) {
             for (let i = 0; i < array.length; i++) {
@@ -87,10 +87,10 @@
 
         arr.sort( (a, b) => b - a );
 
-        alert( arr ); // 8, 5, 2, 1, -10*/
+        alert( arr ); // 8, 5, 2, 1, -10 */
 
         // Copy and sort array
-        /*let arr = ["HTML", "JavaScript", "CSS"];
+        /* let arr = ["HTML", "JavaScript", "CSS"];
         
         function copySorted(arr) {
             return arr.filter(item => item).sort();
@@ -99,9 +99,58 @@
         let sorted = copySorted(arr);
 
         alert( sorted ); // CSS, HTML, JavaScript
-        alert( arr ); // HTML, JavaScript, CSS (no changes)*/
+        alert( arr ); // HTML, JavaScript, CSS (no changes) */
     
-        
+        // Shuffle an array
+        /* let arr = [1, 2, 3];
+
+        function shuffle(array) {
+            for (let i = 0; i <= 100; i++) {
+                index = (Math.floor(Math.random()*3));
+                removedItem = "";
+                removedItem = array.splice(index,1);
+                array.push(removedItem[0]);
+            }          
+        }
+        let count = {
+            '123': 0,
+            '132': 0,
+            '213': 0,
+            '231': 0,
+            '321': 0,
+            '312': 0
+            };
+
+        for (let i = 0; i < 1000000; i++) {
+        let array = [1, 2, 3];
+        shuffle(array);
+        count[array.join('')]++;
+        }
+
+        // show counts of all possible permutations
+        for (let key in count) {
+        console.log(`${key}: ${count[key]}`);
+        } */
+
+        // Filter unique array members
+        /* let uniq = [];
+        function unique(array) {
+            for (let i = 0; i < array.length; i++) {
+                if (uniq.find(item => item == array[i])) {
+                    continue;
+                } else {
+                    uniq.push(array[i]);
+                    console.log(array[i]);
+                }
+            }
+        return uniq;
+        }
+
+        let strings = ["Hare", "Krishna", "Hare", "Krishna",
+        "Krishna", "Krishna", "Hare", "Hare", ":-O"
+        ];
+
+        alert( unique(strings) ); // Hare, Krishna, :-O */
 
     </script>
 </body>
