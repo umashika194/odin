@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+    <div class="buttons">
+        <button id="rock">ROCK</button>
+        <button id="paper">PAPER</button>
+        <button id="scissors">SCISSORS</button>
+        <button class="hidden" id="reset">RESET</button>
+    </div>
+    <div class="results">
+        <p id="round"></p>
+        <p id="result"></p>
+        <p id="score" class="abstand"></p>
+        <p id="finalPara"></p>
+        <p id="finalScorePara" class="abstand"></p>
+    </div>
+    <style>
+        .abstand {
+            margin-bottom: 50px;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        let btnrock = document.querySelector("#rock"); 
+        let btnpaper = document.querySelector("#paper");
+        let btnscissors = document.querySelector("#scissors");
+        let reset = document.querySelector("#reset");
+
+        const roundPara = document.querySelector("#round");
+        const resultPara = document.querySelector("#result");
+        const scorePara = document.querySelector("#score");
+        const finalPara = document.querySelector("#finalPara");
+        const finalScorePara = document.querySelector("#finalScorePara");
+        const divresult = document.querySelector(".results");
+
+        btnrock.addEventListener("click", () => {
+            userChoice = (btnrock.id);
+            playRound(userChoice);
+        });
+        btnpaper.addEventListener("click", () => {
+            userChoice = (btnpaper.id);
+            playRound(userChoice);
+        });
+        btnscissors.addEventListener("click", () => {
+            userChoice = (btnscissors.id);
+            playRound(userChoice);
+        });
+
+        let computerScore = 0;
+        let userScore = 0;
+        let roundint = 0;
+        let computerChoice;
+        let finalScore = "";
+        function getComputerChoice() {
+            random = Math.random()*300;
+            if (random < 100) {
+                return computerChoice = "rock";
+            } else if (random < 200) {
+                return computerChoice = "paper";
+            } else if (random <= 300) {
+                return computerChoice = "scissors";
+            }
+        }
+
+        function playRound(userChoice) {
+            getComputerChoice();
+            winCondition(computerChoice,userChoice);
+        
+            round = `==== ROUND ${roundint} ====`
+            result = `CHOICES User: ${userChoice} Computer: ${computerChoice}`
+            score = `Score: User ${userScore} Computer ${computerScore}`
+            
+            roundPara.textContent = round;
+            resultPara.textContent = result;
+            scorePara.textContent = score;
+
+            if (roundint > 4) {
+                final = `==== FINAL SCORE ====`
+                finalPara.textContent = final;
+
+                if (computerScore === userScore) {
+                    finalScore = "DRAW!!!!";
+                } else if (computerScore > userScore ) {
+                    finalScore = "YOU LOSE!!! HHAHAH!";
+                } else if (computerScore < userScore ) {
+                    finalScore = "YOU WIN!!!";
+                }
+
+                finalScorePara.textContent = `${finalScore}`;
+                
+                reset.removeAttribute("class", "hidden");
+                btnscissors.disabled = true;
+                btnrock.disabled = true;
+                btnpaper.disabled = true;
+            }
+        }
+
+        reset.addEventListener("click", () => {
+            btnscissors.disabled = false;
+            btnrock.disabled = false;
+            btnpaper.disabled = false;
+            computerScore = 0;
+            userScore = 0;
+            roundint = 0;
+            computerChoice = "";
+            userChoice ="";
+            finalScore = "";
+            roundPara.textContent = "";
+            resultPara.textContent = "";
+            scorePara.textContent = ""
+            finalScorePara.textContent = "";
+            finalPara.textContent = "";
+            reset.setAttribute("class", "hidden");
+        });
+
+        function winCondition(input1,input2) {
+            if (input1 === input2 ) {
+                roundint++;
+            } else if (input1 === "rock" && input2 === "scissors" ) {
+                computerScore++;
+                roundint++;
+            } else if (input1 === "scissors" && input2 === "paper" ) {
+                computerScore++;
+                roundint++;
+            } else if (input1 === "paper" && input2 === "rock" ) {
+                computerScore++;
+                roundint++;
+            } else {
+                userScore++;
+                roundint++;
+            }
+        }
+
+
+    </script>
+</body>
+</html>
