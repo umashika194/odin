@@ -32,4 +32,4 @@ schedule["8:30"] = "get up";
 
 alert( isEmpty(schedule) ); // false
 
-//
+// Sum object properties
